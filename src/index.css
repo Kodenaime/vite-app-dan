@@ -90,6 +90,17 @@ img {
     transition: var(--transition);
 }
 
+.btn.new {
+    color: var(--white-color);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.7rem 2rem;
+    background: var(--light-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--light-color);
+    transition: var(--transition);
+}
+
 .btn:hover {
     background: transparent;
     border-color: var(--orange);

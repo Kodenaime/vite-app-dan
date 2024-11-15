@@ -1,9 +1,34 @@
-import React from 'react'
- 
+import React, { useState } from 'react'
 import './home.css'
 import Task from '../components/Task'
+import TaskList from '../components/TaskList'
 
 const Home = () => {
+
+    const [tasks, setTasks] = useState([
+    {
+        id: 1,
+        description: "Kode Task Dynamic",
+        deadline: "2024-11-16",
+        priority: "low",
+        completed: false 
+    },
+    {
+        id: 2,
+        description: "Kelechi Task Dynamic",
+        deadline: "2024-11-16",
+        priority: "medium",
+        completed: false 
+    },
+    {
+        id: 3,
+        description: "Daniel Task Dynamic",
+        deadline: "2024-11-16",
+        priority: "high",
+        completed: false 
+    },
+])
+
   return (
     <div className='app-wrap'>
         <h1>To-Do List</h1>
@@ -34,7 +59,7 @@ const Home = () => {
             </label>
 
         </div>
-
+        <TaskList tasks={tasks}/>
     </div>
   )
 }
